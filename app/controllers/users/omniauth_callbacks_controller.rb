@@ -37,7 +37,8 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       fname: auth.info.first_name,
       lname: auth.info.last_name,
       photo: auth.info.image,
-      address: auth.extra.raw_info.location
+      address: auth.extra.raw_info.location,
+      password: Devise.friendly_token[0,20]
     )
   end
 
@@ -51,7 +52,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       provider: auth.provider,
       uid: auth.uid,
       access_token: auth.credentials.token,
-      access_token_secrets: auth.credentials.secret,
+      access_token_secret: auth.credentials.secret,
       expires_at: expires_at
     }
   end

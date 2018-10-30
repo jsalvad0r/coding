@@ -20,6 +20,7 @@ gem 'devise', '~> 4.5'
 gem 'omniauth-facebook', '~> 5.0'
 
 group :development, :test do
+  gem 'pry', '~> 0.11.3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'rspec', '~> 3.8'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
