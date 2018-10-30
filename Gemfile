@@ -13,10 +13,15 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
+gem 'haml', '~> 5.0', '>= 5.0.4'
 gem "pg"
+
+gem 'devise', '~> 4.5'
+gem 'omniauth-facebook', '~> 5.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'rspec', '~> 3.8'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
