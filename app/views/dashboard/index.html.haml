@@ -1,0 +1,3 @@
+%h1= "Bienvenido #{current_user.email}"
+= link_to 'Cerrar Session', destroy_user_session_path, method: :delete
+= image_tag(current_user.photo) if current_user.photo

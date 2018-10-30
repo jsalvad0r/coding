@@ -1,3 +1,12 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  devise_scope :user do
+  	unauthenticated :user do
+      root to: 'sessions#new'
+  	end
+    authenticated :user do
+      root to: 'dashboard#index'
+    end
+  end
+
+  devise_for :users, controllers: { sessions: 'sessions', omniauth_callbacks: "users/omniauth_callbacks" }
 end
