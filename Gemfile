@@ -8,12 +8,13 @@ gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
-gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'coffee-rails', '~> 4.2'
+gem 'bootstrap-sass'
 gem 'jquery-rails'
-gem 'haml', '~> 5.0', '>= 5.0.4'
+gem 'font-awesome-sass', '~> 5.4.1'
+gem 'haml'
 gem "pg"
 
 gem 'devise', '~> 4.5'
